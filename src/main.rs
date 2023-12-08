@@ -9,11 +9,7 @@ struct GearCandidate {
 
 impl GearCandidate {
     fn is_gear(&self) -> bool {
-        if self.part_numbers.len() == 2 {
-            true
-        } else {
-            false
-        }
+        self.part_numbers.len() == 2
     }
     fn gear_ratio(&self) -> u32 {
         self.part_numbers[0] * self.part_numbers[1]
